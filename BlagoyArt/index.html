@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <!--метатег для более новых версий мобильных браузеров для адаптивной верстки-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--метатег для старых версий мобильных браузеров для адаптивной верстки-->
+    <meta name="MobileOptimized" content="320" />
+    <meta name="HandheldFriendly" content="true" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js.js"></script>
+    <link rel="stylesheet" href="css.css"> 
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <title>BlagoyArt</title>
+</head>
+<body> 
+    <div class="wrapper">
+        <div class="header"> 
+            <div class="info">
+                <div class="info__elm">
+                    <div class="info__logo">
+                        <img src="img/logo.png" class="info__logoimg"/>
+                        <span class="info__logotxt">Интернет-магазин "Благой арт"</span>
+                    </div>
+                </div>
+                <div class="info__elm">
+                    <div class="info__elm_search">
+                        <input placeholder="Введите название или артикул"/>
+                        <img src="img/search.png"/>
+                    </div>
+                </div>
+                <div class="info__elm">
+                    <span class="info__tel">+380 66 777 77 77</span>
+                    <div class="info__other">
+                        <span class="info__other_1">ПН-ПТ с 9:00 до 18:00</span>
+                        <span class="info__other_2">Доставка по всей Украине</span>
+                    </div>
+                </div>
+            </div>
+            <div class="menu">                
+                <ul class="menu__but">
+                    <li>
+                        <button class="but"><a>
+                            <img src="img/menu_but.png"/>&nbsp КАТАЛОГ ТОВАРОВ &nbsp
+                            <img class="img_arrow" src="img/menu_arrow.png"/>
+                        </a></button>
+                        <ul class="menu__but_ul">
+                            <li class="new_ul"><a>Свадебная бижутерия</a>
+                                <ul>СВАДЕББНАЯ БИЖУТЕРИЯ
+                                    <li><a>Диадемы</a></li>
+                                    <li><a>Подвески</a></li>
+                                    <li><a>Браслеты</a></li>
+                                    <li><a>Серьги</a></li>
+                                </ul>
+                            </li>
+                            <li><a>Аксессуары для волос</a></li>
+                            <li><a>Броши</a></li>
+                            <li class="new_ul"><a>Мужские аксессуары</a>
+                                <ul>МУЖСКАЯ БИЖУТЕРИЯ
+                                    <li><a>Браслеты</a></li>
+                                    <li><a>Кулоны</a></li>
+                                    <li><a>Зажимы и запонки</a></li>
+                                </ul>
+                            </li>
+                            <li><a>Клатчи</a></li>
+                            <li><a>Детская бижутерия</a></li>
+                            <li><a>Демонстрационное оборудование</a></li>
+                        </ul>            
+                    </li>
+                                
+                    <li><a>УСЛОВИЯ РАБОТЫ</a></li>
+                    <li><a>СКИДКИ</a></li>
+                    <li><a>ОПЛАТА И ДОСТАВКА</a></li>
+                    <li><a>ДОКУМЕНТЫ</a></li>
+                    <li><a>КОНТАКТЫ</a></li>
+                </ul>
+                <div class="menu__basket">
+                    <img src="img/basket.png"/>&nbsp
+                    &nbsp<span class="menu__basket_count"> 10 </span> <!-- доавить бекграудн для этого дива в css src="img/ellips.png"-->
+                    <span>&nbsp ТОВАРОВ /</span><span>&nbsp56 789 Р</span>
+                </div>
+                <div class="menu__user">
+                    <img src="img/user1.png"/>&nbsp
+                    <span> ВОЙТИ</span>
+                </div>
+            </div>           
+        </div>
+        <div class="slider">
+            <div class="slide_viewer">
+                <div class="slide_group">
+                    <div class="slide">
+                    </div>
+                    <div class="slide">
+                    </div>
+                    <div class="slide">
+                    </div>
+                </div>
+            </div>
+        </div><!-- End // .slider -->
+        <div class="slide_buttons">
+        </div>
+
+        <div class="directional_nav">
+            <div class="previous_btn" title="Previous">
+            </div>
+            <div class="directional_nav_title"> 
+               <p>Новая коллекция SWAROVSKI уже здесь!</p>
+            </div>
+            <div class="next_btn" title="Next">    
+            </div>
+        </div>
+    </div>
+</body>
+</html>
