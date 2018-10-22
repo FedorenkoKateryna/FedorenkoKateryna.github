@@ -1,0 +1,642 @@
+
+@mixin fldirection($par){
+	-webkit-flex-direction: $par;
+    flex-direction: $par;
+}
+@mixin jus_content($par){
+	justify-content: $par;
+    -webkit-justify-content: $par;
+}
+@mixin al_items($par){
+ 	-webkit-align-items: $par;
+    align-items: $par;
+}
+$wrapper_ph: 768px; /* ph = parent heigth*/
+$wrapper_pw: 1025px; /* pw = parent width*/
+
+$sidebar_pw:80px;
+$logo_h_w: 35px;
+$logo_mt:18px;
+$logo_bt: 52px;
+$ellipse_h_w:20px;
+$ellipse_t:25px;
+$ellipse_l:10px;
+
+$icons_h:300px;
+$icons_div_h: 48px;
+$icons_div_div_w_h:20px;
+$icons_div_div_ml:30px;
+$logo_mt_mb: 14px;
+$sel_mr:-4px;
+$calend_pt:10px;
+
+$header_ph: 63px;
+$header_pw: 945px;
+$header_div_path_pw: 130px;
+$header_div_prof_pw: 160px;
+$header_div__ml_mr: 30px;
+$header_div_span_ml_mr:10px;
+$Vector_pw: 20px;
+$Vector_ph: 9px;
+$Oval_21_pw: 23px;
+$Oval_21_ph: 23px;
+$Shape_pw: 10px;
+$Shape_ph: 10px;
+$path_ml: 122px;
+
+$messages_h:556px;
+$messages_w:854px;
+$messages_mt_mr: 45px;
+$person_pw: 300px;
+$person1_ph:92.66px;
+$foto_ph_pw:50px;
+$foto_ml:20px;
+$desc_pw:210px;
+$desc_h: 92.66px;
+$desc_mr_ml: 15px;
+$desc_mt:7px;
+$name_h:20px;
+
+$conv_pw:553px;
+$search_h:50px;
+$search_div_h:17px;
+$search_div_w:16px;
+$search_div_m:15px;
+$input_w:538px;
+$input_ml:5px;
+
+$text_mes_h:450px;
+$text_mes_scroll_w:8px;
+$mes_div_w:270px;
+$message_no_h:100px;
+$message_no_h_max:100px;
+$message_no_w:540px;
+$foto_text_w_h:36px;
+$text_vector_w:23px;
+$text_vector_h: 15px;
+$pic_w: 65px;
+$pic_h: 36px;
+$pic_w_rigth: 23px;
+
+$wr_mes_h:60px;
+$input_wr_mes_w:390px;
+$icons_wr_mes_mr_ml: 10px;
+$smile_h: 19px;
+$smile_w: 20px;
+$clip_h: 19px;
+$clip_w: 20px;
+$send_h_w: 36px;
+$send1_h_w: 20px;
+$send1_m:7px;
+
+/* calculation heigth %*/
+@mixin calc_perc_h($par, $ph) { 
+    height: $par/$ph*100%;
+}
+/* calculation width %*/
+@mixin calc_perc_w($par, $pw) {
+    width: $par/$pw*100%;
+}
+/* calculation padding %*/
+@mixin calc_perc_p($pt, $pr, $pb, $pl, $ph, $pw) {
+    padding: $pt/$ph*100% $pr/$pw*100% $pb/$ph*100% $pl/$pw*100%;
+}
+/* calculation margin %*/
+@mixin calc_perc_m($mt, $mr, $mb, $ml, $ph, $pw) {
+    margin: $mt/$ph*100% $mr/$pw*100% $mb/$ph*100% $ml/$pw*100%;
+}
+/* calculation top %*/
+@mixin calc_perc_t($t, $ph) {
+    top: $t/$ph*100%;
+}
+/* calculation left %*/
+@mixin calc_perc_l($l, $pw) {
+    left: $l/$pw*100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    }
+.wrapper {
+    width: 100%;
+    height: 100%;
+    max-width: $wrapper_pw;
+    max-height: $wrapper_ph;
+    background: #F9FAFC;
+    margin: auto;
+    display: flex;
+    @include fldirection(row);
+
+
+
+    .sidebar {
+        background: #01134E;
+        @include calc_perc_w($sidebar_pw, $wrapper_pw);
+        height: $wrapper_ph;
+        display: flex;
+        @include fldirection(column);
+        @include jus_content(flex-start);
+        @include al_items(center);
+
+
+        .logo {
+            @include calc_perc_h($logo_h_w, $wrapper_ph);
+            @include calc_perc_w($logo_h_w, $sidebar_pw);
+            @include calc_perc_m ($logo_mt, 0px, $logo_bt, 0px, $sidebar_pw, 1px);
+            cursor: pointer;
+
+            #logo {
+                width: 100%;
+                height: 100%;
+                background: url('img/logo.png') no-repeat 50% 0;
+                background-size: contain;
+            }
+        }
+
+        #ellipse {
+            @include calc_perc_h($ellipse_h_w, $wrapper_ph);
+            @include calc_perc_w($ellipse_h_w, $sidebar_pw);
+            font-weight: bold;
+            font-size: 12px;
+            color: white;
+            display: flex;
+            @include al_items(center);
+            @include jus_content(center);
+            background: url('img/Ellipse.png') no-repeat 50% 0;
+            background-size: contain;
+            position: relative;
+            @include calc_perc_t($ellipse_t, $wrapper_ph);
+            @include calc_perc_l($ellipse_l, $sidebar_pw);
+            cursor: pointer;
+        }
+
+        .icons {
+            @include calc_perc_h($icons_h, $wrapper_ph);
+            width: 100%;
+            display: flex;
+            @include fldirection(column);
+            @include jus_content(space-between);
+
+            > div {
+                @include calc_perc_h($icons_div_h, $icons_h);
+                display: flex;
+                @include fldirection(row);
+
+                > div {
+                    @include calc_perc_h($icons_div_div_w_h, $icons_div_h);
+                    @include calc_perc_w($icons_div_div_w_h, $sidebar_pw);
+                    @include calc_perc_m ($logo_mt_mb, 0px, $logo_mt_mb, $icons_div_div_ml, $sidebar_pw, $sidebar_pw);
+                    cursor: pointer;
+                }
+
+                .sel {
+                    width: 0%;
+                    border-left: solid #0AD69C;
+                    border-width: medium;
+                    @include calc_perc_m (0px, $sel_mr, 0px, 0px, 1px, $sidebar_pw);
+                    height: 100%;
+                }
+
+                #calend {
+                    background: url('img/icon-3.png') no-repeat 50% 0;
+                    background-size: contain;
+                }
+
+                #prof {
+                    background: url('img/my_profile.png') no-repeat 50% 0;
+                    background-size: contain;
+                }
+
+                #tools {
+                    background: url('img/handyman-tools.png') no-repeat 50% 0;
+                    background-size: contain;
+                }
+
+                #team {
+                    background: url('img/team-2.png') no-repeat 50% 0;
+                    background-size: contain;
+                }
+
+                #messag {
+                    background: url('img/messages.png') no-repeat 50% 0;
+                    background-size: contain;
+                }
+            }
+        }
+    }
+
+    .wrap {
+        display: flex;
+        @include fldirection(column);
+        width: $header_pw;
+
+        .header {
+            background: #FFFFFF;
+            width: 100%;
+            max-height: $header_ph;
+            max-width: $header_pw;
+            display: flex;
+            @include fldirection(row);
+            @include jus_content(space-between);
+            border-bottom: 0.01em solid #DAE4F2;
+
+            > div {
+                height: $header_ph;
+                display: flex;
+                @include fldirection(row);
+                @include al_items(center);
+                @include jus_content(center);
+                @include calc_perc_m (0px, $header_div__ml_mr, 0px, $header_div__ml_mr, 1px, $header_pw);
+
+                > span {
+                    @include calc_perc_m (0px, $header_div_span_ml_mr, 0px, $header_div_span_ml_mr, 1px, $header_div_prof_pw);
+                }
+            }
+
+            .path {
+                @include calc_perc_w($header_div_path_pw, $header_pw);
+
+                > div {
+                    background: url('img/Vector.png') no-repeat 50% 0;
+                    background-size: contain;
+                    @include calc_perc_h($Vector_ph, $header_ph);
+                    @include calc_perc_w($Vector_pw, $header_div_path_pw);
+                }
+
+                > span {
+                    font-size: 13px; /*Change % as last test*/
+                }
+            }
+
+            .profile {
+                @include calc_perc_w($header_div_prof_pw, $header_pw);
+                cursor: pointer;
+
+                #foto {
+                    background: url('img/Oval 2.1.png') no-repeat 50% 0;
+                    background-size: contain;
+                    @include calc_perc_h($Oval_21_ph, $header_ph);
+                    @include calc_perc_w($Oval_21_pw, $header_div_prof_pw);
+                }
+
+                #shape {
+                    background: url('img/Shape.png') no-repeat 50% 0;
+                    background-size: contain;
+                    @include calc_perc_h($Shape_ph, $header_ph);
+                    @include calc_perc_w($Shape_pw, $header_div_prof_pw);
+                    margin-top: 4%;
+                }
+
+                > span {
+                    font-size: 14px; /*Change % as last test*/
+                }
+            }
+        }
+
+
+        .messages {
+            height: $messages_h;
+            @include calc_perc_w($messages_w, $header_pw);
+            background: #FFFFFF;
+            box-shadow: 0px 0px 30px rgba(153, 163, 174, 0.06);
+            border-radius: 4px;
+            @include calc_perc_m ($messages_mt_mr, 0px, 0px, $messages_mt_mr, $header_pw, $header_pw);
+            display: flex;
+            @include fldirection(row);
+
+            > div {
+                display: flex;
+                @include fldirection(column);
+            }
+
+            .person {
+                height: $messages_h;
+                @include calc_perc_w($person_pw, $messages_w);
+                border-right: 0.05em solid #EDF0F4;
+
+                .person1 {
+                    @include calc_perc_h($person1_ph, $messages_h);
+                    width: 100%;
+                    display: flex;
+                    @include fldirection(row);
+                    @include al_items(center);
+                    cursor: pointer;
+
+                    .foto {
+                        @include calc_perc_h($foto_ph_pw, $person1_ph);
+                        @include calc_perc_w($foto_ph_pw, $person_pw);
+                        @include calc_perc_m (0px, 0px, 0px, $foto_ml, 1px, $person_pw);
+                    }
+
+                    #Miranda {
+                        background: url('img/Oval 2.png') no-repeat 50% 0;
+                        background-size: contain;
+                    }
+
+                    #Barry {
+                        background: url('img/Oval 2 (1).png') no-repeat 50% 0;
+                        background-size: contain;
+                    }
+
+                    #Stacey {
+                        background: url('img/Oval 2 (2).png') no-repeat 50% 0;
+                        background-size: contain;
+                    }
+
+                    #Michael {
+                        background: url('img/Oval 2 (3).png') no-repeat 50% 0;
+                        background-size: contain;
+                    }
+
+                    #Johny {
+                        background: url('img/Oval 2 (4).png') no-repeat 50% 0;
+                        background-size: contain;
+                    }
+
+                    #Stacey1 {
+                        background: url('img/Oval 2 (5).png') no-repeat 50% 0;
+                        background-size: contain;
+                    }
+
+                    .desc {
+                        @include calc_perc_w($desc_pw, $person_pw);
+                        max-height: $person1_ph;
+                        @include calc_perc_h($person1_ph, $person1_ph);
+                        @include calc_perc_m ($desc_mt, $desc_mr_ml, 0px, $desc_mr_ml, $person1_ph, $desc_pw);
+
+
+                        .time {
+                            text-align: end;
+                            font-family: Roboto;
+                            font-size: 12px;
+                            color: #9BA0AD;
+                        }
+
+                        .name {
+                            font-family: 'Exo 2', sans-serif;
+                            font-weight: 500;
+                            font-size: 16px;
+                            letter-spacing: 0.05em;
+                        }
+
+
+
+                        > div {
+                            @include calc_perc_h($name_h, $person1_ph);
+                            display: flex;
+                            @include fldirection(row);
+
+                            .online {
+                                width: 3%;
+                                height: 35%;
+                                background: url('img/Oval 4.png') no-repeat 50% 0;
+                                background-size: contain;
+                            }
+
+                            .sound {
+                                background: url('img/request.png') no-repeat 50% 0;
+                                background-size: contain;
+                                height: 60%;
+                                width: 7%;
+                                margin: 3% 0px 0px 3%;
+                            }
+                        }
+
+                        .mess {
+                            font-size: 14px;
+                            color: #252F48;
+                            opacity: 0.43;
+                            padding-top: 2%;
+                        }
+                    }
+                }
+
+                #readed {
+                    background-color: #F7F9FC;
+                }
+
+                #readnow {
+                    background: #FFFFFF;
+                    box-shadow: 0px 0.5em 0.5em rgba(190, 200, 212, 0.2), 0px -0.5em 0.5em rgba(224, 224, 224, 0.15);
+                }
+            }
+
+            .conv {
+                height: $messages_h;
+                @include calc_perc_w($conv_pw, $messages_w);
+
+                .search {
+                    @include calc_perc_h($search_h, $messages_h);
+                    width: 100%;
+                    display: flex;
+                    @include fldirection(row);
+                    border-bottom: 0.05em solid #F5F6F9;
+
+                    > div {
+                        @include calc_perc_h($search_div_h, $search_h);
+                        @include calc_perc_w($search_div_w, $conv_pw);
+                        @include calc_perc_m ($search_div_m, $search_div_m, 0px, $search_div_m, $conv_pw, $conv_pw);
+                        background: url('img/search-5.png') no-repeat 50% 0;
+                        background-size: contain;
+                        cursor: pointer;
+                    }
+
+                    > input {
+                        font-family: 'Roboto', sans-serif;
+                        border: none;
+                        height: 99%;
+                        @include calc_perc_w($input_w, $conv_pw);
+                        @include calc_perc_m (0px, 0px, 0px, $input_ml, $conv_pw, $conv_pw);
+                        color: #252F48;
+                        opacity: 0.2;
+                        line-height: 1.8em;
+                        font-size: 14px;
+                        letter-spacing: 0.05em;
+                    }
+                }
+
+                .text_mes {
+                    @include calc_perc_h($text_mes_h, $messages_h);
+                    width: 100%;
+                    overflow-y: scroll;
+
+                    .date_mes {
+                        font-family: Exo 2;
+                        font-weight: 500;
+                        font-size: 14px;
+                        letter-spacing: 0.5px;
+                        color: #CACED9;
+                        display: flex;
+                        @include jus_content(center);
+                        padding: 3%;
+                    }
+
+                    .message_no {
+                        display: flex;
+                        @include fldirection(row);
+                        @include al_items(flex-end);
+                        height: $message_no_h;
+                        max-height: $message_no_h_max;
+                        @include calc_perc_w($message_no_w, $conv_pw);
+                        padding-left: 2%;
+                        margin: 0px 0px 1% 0px;
+                    }
+
+                    .message_no_right {
+                        display: flex;
+                        @include fldirection(row);
+                        @include jus_content(flex-end);
+                        @include al_items(flex-end);
+                        height: $message_no_h;
+                        @include calc_perc_w($message_no_w, $conv_pw);
+                        padding-left: 2%;
+                        margin: 0px 0px 1% 0px;
+                    }
+
+                    .pic {
+                        display: flex;
+                        @include fldirection(row);
+                        @include al_items(flex-end);
+                        @include calc_perc_h($pic_h, $message_no_h);
+                        @include calc_perc_w($pic_w, $message_no_w);
+                    }
+
+                    .pic_right {
+                        display: flex;
+                        @include fldirection(row);
+                        @include al_items(flex-end);
+                        @include calc_perc_h($pic_h, $message_no_h);
+                        @include calc_perc_w($pic_w_rigth, $message_no_w);
+                    }
+
+                    .foto_text {
+                        @include calc_perc_w($foto_text_w_h,$pic_w);
+                        @include calc_perc_h($foto_text_w_h, $pic_h);
+                        background: url('img/Oval 2 (2).png')no-repeat 50% 0;
+                        background-size: contain;
+                    }
+
+                    .text_vector {
+                        @include calc_perc_w($text_vector_w, $pic_w);
+                        @include calc_perc_h($text_vector_h, $pic_h);
+                        background: url('img/text_vector.png')no-repeat 50% 0;
+                        background-size: contain;
+                        margin-left: -10%;
+                    }
+
+                    .text_vector_right {
+                        @include calc_perc_w($text_vector_w, $pic_w_rigth);
+                        @include calc_perc_h($text_vector_h, $pic_h);
+                        background: url('img/text_vector_right.png')no-repeat 50% 0;
+                        background-size: contain;
+                        margin: 0px 0px -8% -40%;
+                    }
+
+
+                    .mes_div {
+                        display: flex;
+                        @include fldirection(row);
+                        @include al_items(flex-end);
+                        @include jus_content(space-between);
+                        @include calc_perc_w($mes_div_w, $message_no_w);
+                        padding: 2%;
+                        background: #F7F9FC;
+                        border-radius: 5px;
+                        margin-left: -4%;
+                        max-height: $message_no_h;
+
+                        .text_message {
+                            font-family: Roboto;
+                            line-height: 20px;
+                            font-size: 14px;
+                        }
+
+                        .time_message {
+                            font-family: Roboto;
+                            font-size: 12px;
+                            letter-spacing: 0.428571px;
+                            color: #9BA0AD;
+                            text-align: end;
+                        }
+                    }
+                }
+
+                .text_mes::-webkit-scrollbar {
+                    width: 1.5%;
+                }
+
+                .text_mes::-webkit-scrollbar-track {
+                    background: rgba(22, 27, 39, 0.05);
+                    border-radius: 4px;
+                }
+
+                .text_mes::-webkit-scrollbar-thumb {
+                    background: rgba(07, 26, 74, 0.05);
+                    border-radius: 4px;
+                }
+
+                .wr_mes {
+                    @include calc_perc_h($wr_mes_h, $messages_h);
+                    width: 100%;
+                    display: flex;
+                    @include fldirection(row);
+                    @include al_items(center);
+                    box-shadow: 0px 0px 2em rgba(153, 163, 174, 0.146541);
+
+                    input {
+                        font-family: 'Roboto', sans-serif;
+                        border: none;
+                        height: 99%;
+                        @include calc_perc_w($input_wr_mes_w, $conv_pw);
+                        padding-left: 6%;
+                        color: #252F48;
+                        opacity: 0.2;
+                        line-height: 1.8em;
+                        font-size: 14px;
+                        letter-spacing: 0.05em;
+                    }
+
+                    button {
+                        border: none;
+                        cursor: pointer;
+                        @include calc_perc_m (0px, $icons_wr_mes_mr_ml, 0px, $icons_wr_mes_mr_ml, 1px, $conv_pw);
+                    }
+
+                    #smile {
+                        @include calc_perc_h($smile_h, $wr_mes_h);
+                        @include calc_perc_w($smile_w, $conv_pw);
+                        background: url('img/smiling-emoticon-square-face.png') no-repeat 50% 0;
+                        background-size: contain;
+                    }
+
+                    #clip {
+                        @include calc_perc_h($clip_h, $wr_mes_h);
+                        @include calc_perc_w($clip_w, $conv_pw);
+                        background: url('img/clip.png') no-repeat 50% 0;
+                        background-size: contain;
+                    }
+
+                    .send {
+                        @include calc_perc_h($send_h_w, $wr_mes_h);
+                        @include calc_perc_w($send_h_w, $conv_pw);
+                        box-shadow: 0px 0px 1.5em rgba(153, 163, 174, 0.259256);
+                        border-radius: 7px;
+                        background: white;
+
+                        #send1 {
+                            @include calc_perc_h($send1_h_w, $send_h_w);
+                            @include calc_perc_w($send1_h_w, $send_h_w);
+                            @include calc_perc_m($send1_m, $send1_m, $send1_m, $send1_m, $send_h_w, $send_h_w);
+                            background: url('img/send-message-button.png') no-repeat 50% 0;
+                            background-size: contain;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,428 @@
+/* ph = parent heigth*/
+/* pw = parent width*/
+/* calculation heigth %*/
+/* calculation width %*/
+/* calculation padding %*/
+/* calculation margin %*/
+/* calculation top %*/
+/* calculation left %*/
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: 'Roboto', sans-serif; }
+
+input{
+  outline:none;
+}
+.wrapper {
+  width: 100%;
+  height: 100%;
+  max-width: 1025px;
+  max-height: 768px;
+  background: #F9FAFC;
+  margin: auto;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row; }
+  .wrapper .sidebar {
+    background: #01134E;
+    width: 7.8048780488%;
+    height: 768px;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    justify-content: flex-start;
+    -webkit-justify-content: flex-start;
+    -webkit-align-items: center;
+    align-items: center; }
+    .wrapper .sidebar .logo {
+      height: 4.5572916667%;
+      width: 43.75%;
+      margin: 22.5% 0% 65% 0%;
+      cursor: pointer; }
+      .wrapper .sidebar .logo #logo {
+        width: 100%;
+        height: 100%;
+        background: url("img/logo.png") no-repeat 50% 0;
+        background-size: contain; }
+    .wrapper .sidebar #ellipse {
+      height: 2.6041666667%;
+      width: 25%;
+      font-weight: bold;
+      font-size: 12px;
+      color: white;
+      display: flex;
+      -webkit-align-items: center;
+      align-items: center;
+      justify-content: center;
+      -webkit-justify-content: center;
+      background: url("img/Ellipse.png") no-repeat 50% 0;
+      background-size: contain;
+      position: relative;
+      top: 3.2552083333%;
+      left: 12.5%;
+      cursor: pointer; }
+    .wrapper .sidebar .icons {
+      height: 39.0625%;
+      width: 100%;
+      display: flex;
+      -webkit-flex-direction: column;
+      flex-direction: column;
+      justify-content: space-between;
+      -webkit-justify-content: space-between; }
+      .wrapper .sidebar .icons > div {
+        height: 16%;
+        display: flex;
+        -webkit-flex-direction: row;
+        flex-direction: row; }
+        .wrapper .sidebar .icons > div > div {
+          height: 41.6666666667%;
+          width: 25%;
+          margin: 17.5% 0% 17.5% 37.5%;
+          cursor: pointer; }
+        .wrapper .sidebar .icons > div .sel {
+          width: 0%;
+          border-left: solid #0AD69C;
+          border-width: medium;
+          margin: 0% -5% 0% 0%;
+          height: 100%; }
+        .wrapper .sidebar .icons > div #calend {
+          background: url("img/icon-3.png") no-repeat 50% 0;
+          background-size: contain; }
+        .wrapper .sidebar .icons > div #prof {
+          background: url("img/my_profile.png") no-repeat 50% 0;
+          background-size: contain; }
+        .wrapper .sidebar .icons > div #tools {
+          background: url("img/handyman-tools.png") no-repeat 50% 0;
+          background-size: contain; }
+        .wrapper .sidebar .icons > div #team {
+          background: url("img/team-2.png") no-repeat 50% 0;
+          background-size: contain; }
+        .wrapper .sidebar .icons > div #messag {
+          background: url("img/messages.png") no-repeat 50% 0;
+          background-size: contain; }
+  .wrapper .wrap {
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    width: 945px; }
+    .wrapper .wrap .header {
+      background: #FFFFFF;
+      width: 100%;
+      max-height: 63px;
+      max-width: 945px;
+      display: flex;
+      -webkit-flex-direction: row;
+      flex-direction: row;
+      justify-content: space-between;
+      -webkit-justify-content: space-between;
+      border-bottom: 0.01em solid #DAE4F2; }
+      .wrapper .wrap .header > div {
+        height: 63px;
+        display: flex;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        -webkit-align-items: center;
+        align-items: center;
+        justify-content: center;
+        -webkit-justify-content: center;
+        margin: 0% 3.1746031746% 0% 3.1746031746%; }
+        .wrapper .wrap .header > div > span {
+          margin: 0% 6.25% 0% 6.25%; }
+      .wrapper .wrap .header .path {
+        width: 13.7566137566%; }
+        .wrapper .wrap .header .path > div {
+          background: url("img/Vector.png") no-repeat 50% 0;
+          background-size: contain;
+          height: 14.2857142857%;
+          width: 15.3846153846%; }
+        .wrapper .wrap .header .path > span {
+          font-size: 13px;
+          /*Change % as last test*/ }
+      .wrapper .wrap .header .profile {
+        width: 16.9312169312%;
+        cursor: pointer; }
+        .wrapper .wrap .header .profile #foto {
+          background: url("img/Oval 2.1.png") no-repeat 50% 0;
+          background-size: contain;
+          height: 36.5079365079%;
+          width: 14.375%; }
+        .wrapper .wrap .header .profile #shape {
+          background: url("img/Shape.png") no-repeat 50% 0;
+          background-size: contain;
+          height: 15.873015873%;
+          width: 6.25%;
+          margin-top: 4%; }
+        .wrapper .wrap .header .profile > span {
+          font-size: 14px;
+          /*Change % as last test*/ }
+    .wrapper .wrap .messages {
+      height: 556px;
+      width: 90.3703703704%;
+      background: #FFFFFF;
+      box-shadow: 0px 0px 30px rgba(153, 163, 174, 0.06);
+      border-radius: 4px;
+      margin: 4.7619047619% 0% 0% 4.7619047619%;
+      display: flex;
+      -webkit-flex-direction: row;
+      flex-direction: row; }
+      .wrapper .wrap .messages > div {
+        display: flex;
+        -webkit-flex-direction: column;
+        flex-direction: column; }
+      .wrapper .wrap .messages .person {
+        height: 556px;
+        width: 35.1288056206%;
+        border-right: 0.05em solid #EDF0F4; }
+        .wrapper .wrap .messages .person .person1 {
+          height: 16.6654676259%;
+          width: 100%;
+          display: flex;
+          -webkit-flex-direction: row;
+          flex-direction: row;
+          -webkit-align-items: center;
+          align-items: center;
+          cursor: pointer; }
+          .wrapper .wrap .messages .person .person1 .foto {
+            height: 53.9607165983%;
+            width: 16.6666666667%;
+            margin: 0% 0% 0% 6.6666666667%; }
+          .wrapper .wrap .messages .person .person1 #Miranda {
+            background: url("img/Oval 2.png") no-repeat 50% 0;
+            background-size: contain; }
+          .wrapper .wrap .messages .person .person1 #Barry {
+            background: url("img/Oval 2 (1).png") no-repeat 50% 0;
+            background-size: contain; }
+          .wrapper .wrap .messages .person .person1 #Stacey {
+            background: url("img/Oval 2 (2).png") no-repeat 50% 0;
+            background-size: contain; }
+          .wrapper .wrap .messages .person .person1 #Michael {
+            background: url("img/Oval 2 (3).png") no-repeat 50% 0;
+            background-size: contain; }
+          .wrapper .wrap .messages .person .person1 #Johny {
+            background: url("img/Oval 2 (4).png") no-repeat 50% 0;
+            background-size: contain; }
+          .wrapper .wrap .messages .person .person1 #Stacey1 {
+            background: url("img/Oval 2 (5).png") no-repeat 50% 0;
+            background-size: contain; }
+          .wrapper .wrap .messages .person .person1 .desc {
+            width: 70%;
+            max-height: 92.66px;
+            height: 100%;
+            margin: 7.5545003238% 7.1428571429% 0% 7.1428571429%; }
+            .wrapper .wrap .messages .person .person1 .desc .time {
+              text-align: end;
+              font-family: Roboto;
+              font-size: 12px;
+              color: #9BA0AD; }
+            .wrapper .wrap .messages .person .person1 .desc .name {
+              font-family: 'Exo 2', sans-serif;
+              font-weight: 500;
+              font-size: 16px;
+              letter-spacing: 0.05em; }
+            .wrapper .wrap .messages .person .person1 .desc > div {
+              height: 21.5842866393%;
+              display: flex;
+              -webkit-flex-direction: row;
+              flex-direction: row; }
+              .wrapper .wrap .messages .person .person1 .desc > div .online {
+                width: 3%;
+                height: 35%;
+                background: url("img/Oval 4.png") no-repeat 50% 0;
+                background-size: contain; }
+              .wrapper .wrap .messages .person .person1 .desc > div .sound {
+                background: url("img/request.png") no-repeat 50% 0;
+                background-size: contain;
+                height: 60%;
+                width: 7%;
+                margin: 3% 0px 0px 3%; }
+            .wrapper .wrap .messages .person .person1 .desc .mess {
+              font-size: 14px;
+              color: #252F48;
+              opacity: 0.43;
+              padding-top: 2%; }
+        .wrapper .wrap .messages .person #readed {
+          background-color: #F7F9FC; }
+        .wrapper .wrap .messages .person #readnow {
+          background: #FFFFFF;
+          box-shadow: 0px 0.5em 0.5em rgba(190, 200, 212, 0.2), 0px -0.5em 0.5em rgba(224, 224, 224, 0.15); }
+      .wrapper .wrap .messages .conv {
+        height: 556px;
+        width: 64.7540983607%; }
+        .wrapper .wrap .messages .conv .search {
+          height: 8.9928057554%;
+          width: 100%;
+          display: flex;
+          -webkit-flex-direction: row;
+          flex-direction: row;
+          border-bottom: 0.05em solid #F5F6F9; }
+          .wrapper .wrap .messages .conv .search > div {
+            height: 34%;
+            width: 2.8933092224%;
+            margin: 2.712477396% 2.712477396% 0% 2.712477396%;
+            background: url("img/search-5.png") no-repeat 50% 0;
+            background-size: contain;
+            cursor: pointer; }
+          .wrapper .wrap .messages .conv .search > input {
+            font-family: 'Roboto', sans-serif;
+            border: none;
+            height: 99%;
+            width: 97.287522604%;
+            margin: 0% 0% 0% 0.904159132%;
+            color: #252F48;
+            opacity: 0.2;
+            line-height: 1.8em;
+            font-size: 14px;
+            letter-spacing: 0.05em; }
+        .wrapper .wrap .messages .conv .text_mes {
+          height: 80.9352517986%;
+          width: 100%;
+          overflow-y: scroll; }
+          .wrapper .wrap .messages .conv .text_mes .date_mes {
+            font-family: Exo 2;
+            font-weight: 500;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            color: #CACED9;
+            display: flex;
+            justify-content: center;
+            -webkit-justify-content: center;
+            padding: 3%; }
+          .wrapper .wrap .messages .conv .text_mes .message_no {
+            display: flex;
+            -webkit-flex-direction: row;
+            flex-direction: row;
+            -webkit-align-items: flex-end;
+            align-items: flex-end;
+            height: 100px;
+            max-height: 100px;
+            width: 97.6491862568%;
+            padding-left: 2%;
+            margin: 0px 0px 1% 0px; }
+          .wrapper .wrap .messages .conv .text_mes .message_no_right {
+            display: flex;
+            -webkit-flex-direction: row;
+            flex-direction: row;
+            justify-content: flex-end;
+            -webkit-justify-content: flex-end;
+            -webkit-align-items: flex-end;
+            align-items: flex-end;
+            height: 100px;
+            width: 97.6491862568%;
+            padding-left: 2%;
+            margin: 0px 0px 1% 0px; }
+          .wrapper .wrap .messages .conv .text_mes .pic {
+            display: flex;
+            -webkit-flex-direction: row;
+            flex-direction: row;
+            -webkit-align-items: flex-end;
+            align-items: flex-end;
+            height: 36%;
+            width: 12.037037037%; }
+          .wrapper .wrap .messages .conv .text_mes .pic_right {
+            display: flex;
+            -webkit-flex-direction: row;
+            flex-direction: row;
+            -webkit-align-items: flex-end;
+            align-items: flex-end;
+            height: 36%;
+            width: 4.2592592593%; }
+          .wrapper .wrap .messages .conv .text_mes .foto_text {
+            width: 55.3846153846%;
+            height: 100%;
+            background: url("img/Oval 2 (2).png") no-repeat 50% 0;
+            background-size: contain; }
+          .wrapper .wrap .messages .conv .text_mes .text_vector {
+            width: 35.3846153846%;
+            height: 41.6666666667%;
+            background: url("img/text_vector.png") no-repeat 50% 0;
+            background-size: contain;
+            margin-left: -10%; }
+          .wrapper .wrap .messages .conv .text_mes .text_vector_right {
+            width: 100%;
+            height: 41.6666666667%;
+            background: url("img/text_vector_right.png") no-repeat 50% 0;
+            background-size: contain;
+            margin: 0px 0px -8% -40%; }
+          .wrapper .wrap .messages .conv .text_mes .mes_div {
+            display: flex;
+            -webkit-flex-direction: row;
+            flex-direction: row;
+            -webkit-align-items: flex-end;
+            align-items: flex-end;
+            justify-content: space-between;
+            -webkit-justify-content: space-between;
+            width: 50%;
+            padding: 2%;
+            background: #F7F9FC;
+            border-radius: 5px;
+            margin-left: -4%;
+            max-height: 100px; }
+            .wrapper .wrap .messages .conv .text_mes .mes_div .text_message {
+              font-family: Roboto;
+              line-height: 20px;
+              font-size: 14px; }
+            .wrapper .wrap .messages .conv .text_mes .mes_div .time_message {
+              font-family: Roboto;
+              font-size: 12px;
+              letter-spacing: 0.428571px;
+              color: #9BA0AD;
+              text-align: end; }
+        .wrapper .wrap .messages .conv .text_mes::-webkit-scrollbar {
+          width: 1.5%; }
+        .wrapper .wrap .messages .conv .text_mes::-webkit-scrollbar-track {
+          background: rgba(22, 27, 39, 0.05);
+          border-radius: 4px; }
+        .wrapper .wrap .messages .conv .text_mes::-webkit-scrollbar-thumb {
+          background: rgba(7, 26, 74, 0.05);
+          border-radius: 4px; }
+        .wrapper .wrap .messages .conv .wr_mes {
+          height: 10.7913669065%;
+          width: 100%;
+          display: flex;
+          -webkit-flex-direction: row;
+          flex-direction: row;
+          -webkit-align-items: center;
+          align-items: center;
+          box-shadow: 0px 0px 2em rgba(153, 163, 174, 0.146541); }
+          .wrapper .wrap .messages .conv .wr_mes input {
+            font-family: 'Roboto', sans-serif;
+            border: none;
+            height: 99%;
+            width: 70.5244122966%;
+            padding-left: 6%;
+            color: #252F48;
+            opacity: 0.2;
+            line-height: 1.8em;
+            font-size: 14px;
+            letter-spacing: 0.05em; }
+          .wrapper .wrap .messages .conv .wr_mes button {
+            border: none;
+            cursor: pointer;
+            margin: 0% 1.808318264% 0% 1.808318264%; }
+          .wrapper .wrap .messages .conv .wr_mes #smile {
+            height: 31.6666666667%;
+            width: 3.616636528%;
+            background: url("img/smiling-emoticon-square-face.png") no-repeat 50% 0;
+            background-size: contain; }
+          .wrapper .wrap .messages .conv .wr_mes #clip {
+            height: 31.6666666667%;
+            width: 3.616636528%;
+            background: url("img/clip.png") no-repeat 50% 0;
+            background-size: contain; }
+          .wrapper .wrap .messages .conv .wr_mes .send {
+            height: 60%;
+            width: 6.5099457505%;
+            box-shadow: 0px 0px 1.5em rgba(153, 163, 174, 0.259256);
+            border-radius: 7px;
+            background: white; }
+            .wrapper .wrap .messages .conv .wr_mes .send #send1 {
+              height: 55.5555555556%;
+              width: 55.5555555556%;
+              margin: 19.4444444444% 19.4444444444% 19.4444444444% 19.4444444444%;
+              background: url("img/send-message-button.png") no-repeat 50% 0;
+              background-size: contain; }
+
+/*# sourceMappingURL=style.css.map */
