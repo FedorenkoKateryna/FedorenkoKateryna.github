@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <!--метатег для более новых версий мобильных браузеров для адаптивной верстки-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--метатег для старых версий мобильных браузеров для адаптивной верстки-->
+    <meta name="MobileOptimized" content="320" />
+    <meta name="HandheldFriendly" content="true" />
+    <script type="text/javascript" src="js.js"></script>
+    <link rel="stylesheet" href="css.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <title>Log In</title>
+</head>
+<body> 
+    <div class="wrapper">
+        <div class="info"> 
+            <div class="info__logo">
+                <a href=""><img src="img/logo.png"/></a>
+                <span>Technologies</span>
+            </div>
+            <span>Get how-to help and instructions or specific features in</span>
+            <div>
+                <input type="button" value="HELP CENTER" onclick="location.href='index.html';" /> &nbsp or &nbsp
+                <input type="button" value="SUPPORT" onclick="location.href='index.html';"/>
+            </div>
+        </div>
+        <div class="login">
+            <span class="login__title">Welcome back</span>
+            <div class="login__other">
+                <div class="login__action">Sign in to continue to IO Technologies.</div>
+                <form name="login__form" novalidate>
+                    <div class="form-group">
+                        <input id="userEmail" type="email" placeholder="Your email - Nikita1@gmail.com" autocomplete="on" required>    
+                        <div class="errorEmail">
+                            <span>Oops! You entered an invalid email</span>
+                        </div>
+                    </div>  
+                    <div class="form-group">                       
+                        <input id="userPas" type="password" placeholder="Password - NikitaSuperhero1" pattern="[a-zA-Z0-9]{6,20}$" autocomplete="on" required>
+                        <div class="errorPas">
+                            <span>Oops! You entered an invalid password</span>
+                        </div>                       
+                    </div>
+                </form>
+            </div>
+            <button id="bt" type="submit" class="bt" onclick="login()">
+                LOG IN &nbsp<img src="img/long-arrow-right.png"/>
+            </button>            
+            <div class="change_pass">
+                <span>Forgot your password?</span> <a href="reset_password.html">Reset</a>      
+            </div>
+        </div>
+    </div>
+</body>
+</html>
