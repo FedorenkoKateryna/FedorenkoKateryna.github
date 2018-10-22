@@ -1,0 +1,225 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style:none;
+}
+a{
+    text-decoration:none;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    /*padding-top: calc(100vh*0.08);*/
+}
+.warp {
+    width: 100%;
+    max-width: 1920px;
+    background: url('img/f.png') no-repeat 50% 0;
+    margin: auto;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+.wrapper {
+    max-width: 985px;
+    margin: auto;
+    margin: 3.5% 25% 14% 25%;
+}
+.sel {
+    background: rgba(31,40,48,0.2);
+    width: 100%;
+    max-height: calc(100vW*0.05); /*5% это процент от высоты блока в макете 100px/1080px */
+    border: solid 1px rgb(43,59,69);
+    border-radius: 7px;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+}
+
+@media screen and (max-width:1366px) {
+    .wrapper {
+        max-width: 700px;        
+    }
+}
+@media screen and (max-width:1280px){
+    .wrapper {
+        max-width: 655px;       
+    }
+}
+
+@media screen and (max-width:800px) {
+    .wrapper {
+        max-width: 410px;
+    }
+}
+
+/*переделать размеры под более узкие экраны */
+
+@media screen and (max-width:640px) {
+    .wrapper {
+        max-width: 328px;
+    }
+
+}
+@media screen and (max-width:320px) {
+    .wrapper {
+        max-width: 164px;
+    }
+
+}
+
+.txt {
+    font-size: calc( (100vw - 320px)/(1920 - 320) * (32 - 4) + 4px);
+    /*font-size: 200%; 32px;*/
+    font-weight: 500;
+    margin: 2.7% 0% 0% 14%;
+}
+.dropdown-menu {
+    border: solid 1px rgb(43,59,69);
+    border-radius: 7px;
+    background: rgb(20, 34, 44);
+    margin: 2% 2% 2% 0%;
+    padding: 2% 0% 2% 0%;
+    z-index: 2;
+    width: 30%;
+    color: #c3c5c6;    
+}
+    .dropdown-menu ul {
+        margin-top: 8%;
+        padding:4% 0% 2% 4%;
+        border: solid 1px rgb(146,232,254);
+        border-radius: 7px;
+        display: none;
+        background: rgb(20, 34, 44);        
+    }
+
+        .dropdown-menu ul li {
+            background: rgb(20, 34, 44);
+            padding-bottom:2%;
+            border-radius: 7px;
+            margin: 0.5%;
+        }
+
+            .dropdown-menu ul li a {
+                display: block;
+                width: 100%;
+                font-size: calc( (100vw - 320px)/(1920 - 320) * (16 - 4) + 4px);
+                /*font-size: 100%; 16px;*/
+                font-weight: lighter;
+                color: #c3c5c6;
+            }
+
+    .dropdown-menu .title {
+        font-size: calc( (100vw - 320px)/(1920 - 320) * (16 - 4) + 4px);
+        width: 89.5%;
+        cursor: pointer;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        display: flex;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        -webkit-align-items: center;
+        align-items: center;
+        padding: 0% 5%;
+    }
+#str {
+    width: 70%;
+}
+
+.dropdown-menu.open {
+    border: solid 1px rgb(146,232,254);
+}
+
+.dropdown-menu.open ul {
+    display: block;
+}
+
+
+.cont {
+    width: 100%;    
+    margin-top: 5%;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+    .cont > div {
+        width: 31%; /*308px;*/
+        padding-bottom: 6%;
+        max-height: 33%;
+    }
+.e {
+    background: url('img/Ethereum.png') no-repeat 50% 0;
+    background-size: contain;
+    z-index: 1;
+}
+.l {
+    background: url('img/Litecoin.png') no-repeat 50% 0;
+    background-size: contain;
+    z-index: 1;
+}
+.b {
+    background: url('img/Bitcoin.png') no-repeat 50% 0;
+    background-size: contain;    
+    z-index: 1;
+}
+.cont > div > div {
+    width: 80%;
+}
+.curName {
+    font-size: calc( (100vw - 320px)/(1920 - 320) * (22 - 4) + 4px);
+    /*font-size: 140%; 22px;*/
+    font-weight: bold;
+    margin: 5% 10% 0% 10%;
+    text-align: center;
+}
+.price {
+    font-size: calc( (100vw - 320px)/(1920 - 320) * (20 - 4) + 4px);
+    /*font-size: 125%; 20px;*/
+    font-weight: bold;
+    margin: 47% 10% 0% 10%;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+.pchange {
+    font-size: calc( (100vw - 320px)/(1920 - 320) * (14 - 4) + 4px);
+    /*font-size: 87.5%; 14px;*/
+    font-weight: bold;
+    margin: 4% 10% 0% 10%;
+}
+.rad {
+    float: right;
+    width:14%;
+}
+.otherCh {
+    margin: 3% 10% 0% 10%;
+}
+.otherCh > div {
+    width: 100%;
+}
+.changes {    
+    margin-top:1.5%;
+    font-weight: bold;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+    .changes > p {
+        font-size: calc( (100vw - 320px)/(1920 - 320) * (14 - 2) + 2px);
+        /*font-size: 87.5%; 14px;*/
+        color: rgb(110,110,110);
+    }
+    .changes > span {
+        font-size: calc( (100vw - 320px)/(1920 - 320) * (16 - 2) + 2px);
+        /*font-size: 100%; /*16px;*/
+        color: rgb(112,196,70);
+    }
+
+
+
