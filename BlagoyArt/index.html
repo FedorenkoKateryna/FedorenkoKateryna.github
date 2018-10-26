@@ -8,84 +8,99 @@
     <meta name="MobileOptimized" content="320" />
     <meta name="HandheldFriendly" content="true" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js.js"></script>
     <link rel="stylesheet" href="css.css"> 
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <title>BlagoyArt</title>
 </head>
-<body> 
-    <div class="wrapper">
-        <div class="header"> 
-            <div class="info">
-                <div class="info__elm">
-                    <div class="info__logo">
-                        <img src="img/logo.png" class="info__logoimg"/>
-                        <span class="info__logotxt">Интернет-магазин "Благой арт"</span>
+<body>  
+    <header>       
+        <nav class="navbar navbar-light bg-white">  
+            <div class="container align-items-start"> 
+                <div class="col-xl-3 col-md-5 col-sm-6 col-10">
+                    <img class="logo" src="img/logo.png"/>
+                    <span>Интернет-магазин "Благой арт"</span>
+                </div>                
+                <div class="col-xl-4  col-md-6 col-sm-6 col-12 search mt-1">
+                    <input class="col-xl-11 col-md-11 col-sm-11 col-11" placeholder="Введите название или артикул"/>
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </div>  
+                <div class="row justify-content-end col-xl-auto col-md-12 col-sm-12 col-12 hidden-md">       
+                    <span class="kf-tel">+38066 777 77 77</span>
+                    <div class="kf-other-info">
+                        <p class="kf-time">ПН-ПТ с 9:00 до 18:00</p>                        
+                        <p class="kf-deliver">Доставка по всей Украине</p>
                     </div>
                 </div>
-                <div class="info__elm">
-                    <div class="info__elm_search">
-                        <input placeholder="Введите название или артикул"/>
-                        <img src="img/search.png"/>
+            </div>  
+            <div class="navbar container mt-3"> 
+                <hr>                    
+                <nav class="navbar navbar-expand-md">
+                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="navbar-collapse collapse" id="navbarsExampleDefault" style="">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="dropdown">
+                                <a data-toggle="dropdown">
+                                    <i class="fa fa-list" aria-hidden="true"></i>
+                                    КАТАЛОГ ТОВАРОВ
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </a>                        
+                                <ul class="dropdown-menu mt-1">
+                                    <li>
+                                        <a class="sub">Свадебная бижутерия
+                                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                        </a>
+                                        <ul class="dropdown-menu ml-1 pl-2">СВАДЕББНАЯ БИЖУТЕРИЯ
+                                            <li><a href="#">Диадемы</a></li>
+                                            <li><a href="#">Подвески</a></li>
+                                            <li><a href="#">Браслеты</a></li>
+                                            <li><a href="#">Серьги</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Аксессуары для волос</a></li>
+                                    <li><a href="#">Броши</a></li>
+                                    <li>
+                                        <a class="sub">Мужские аксессуары
+                                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                        </a>
+                                        <ul class="dropdown-menu ml-1 pl-2">МУЖСКАЯ БИЖУТЕРИЯ
+                                            <li><a href="#">Браслеты</a></li>
+                                            <li><a href="#">Кулоны</a></li>
+                                            <li><a href="#">Зажимы и запонки</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Клатчи</a></li>
+                                    <li><a href="#">Детская бижутерия</a></li>
+                                    <li><a href="#">Демонстрационное оборудование</a></li>
+                                </ul>            
+                            </li>                                
+                            <li><a href="#">УСЛОВИЯ РАБОТЫ</a></li>
+                            <li><a href="#">СКИДКИ</a></li>
+                            <li><a href="#">ОПЛАТА И ДОСТАВКА</a></li>
+                            <li><a href="#">ДОКУМЕНТЫ</a></li>
+                            <li><a href="#">КОНТАКТЫ</a></li>
+                        </ul>        
                     </div>
-                </div>
-                <div class="info__elm">
-                    <span class="info__tel">+380 66 777 77 77</span>
-                    <div class="info__other">
-                        <span class="info__other_1">ПН-ПТ с 9:00 до 18:00</span>
-                        <span class="info__other_2">Доставка по всей Украине</span>
-                    </div>
-                </div>
-            </div>
-            <div class="menu">                
-                <ul class="menu__but">
-                    <li>
-                        <button class="but"><a>
-                            <img src="img/menu_but.png"/>&nbsp КАТАЛОГ ТОВАРОВ &nbsp
-                            <img class="img_arrow" src="img/menu_arrow.png"/>
-                        </a></button>
-                        <ul class="menu__but_ul">
-                            <li class="new_ul"><a>Свадебная бижутерия</a>
-                                <ul>СВАДЕББНАЯ БИЖУТЕРИЯ
-                                    <li><a>Диадемы</a></li>
-                                    <li><a>Подвески</a></li>
-                                    <li><a>Браслеты</a></li>
-                                    <li><a>Серьги</a></li>
-                                </ul>
-                            </li>
-                            <li><a>Аксессуары для волос</a></li>
-                            <li><a>Броши</a></li>
-                            <li class="new_ul"><a>Мужские аксессуары</a>
-                                <ul>МУЖСКАЯ БИЖУТЕРИЯ
-                                    <li><a>Браслеты</a></li>
-                                    <li><a>Кулоны</a></li>
-                                    <li><a>Зажимы и запонки</a></li>
-                                </ul>
-                            </li>
-                            <li><a>Клатчи</a></li>
-                            <li><a>Детская бижутерия</a></li>
-                            <li><a>Демонстрационное оборудование</a></li>
-                        </ul>            
-                    </li>
-                                
-                    <li><a>УСЛОВИЯ РАБОТЫ</a></li>
-                    <li><a>СКИДКИ</a></li>
-                    <li><a>ОПЛАТА И ДОСТАВКА</a></li>
-                    <li><a>ДОКУМЕНТЫ</a></li>
-                    <li><a>КОНТАКТЫ</a></li>
-                </ul>
-                <div class="menu__basket">
+                </nav>
+
+                <div class="navbar mt-1">
                     <img src="img/basket.png"/>&nbsp
-                    &nbsp<span class="menu__basket_count"> 10 </span> <!-- доавить бекграудн для этого дива в css src="img/ellips.png"-->
-                    <span>&nbsp ТОВАРОВ /</span><span>&nbsp56 789 Р</span>
+                    &nbsp<span class="kf-basket_count"> 10 </span> <!-- доавить бекграудн для этого дива в css src="img/ellips.png"-->
+                    <span class="hidden-xl">&nbsp ТОВАРОВ /</span><span>&nbsp56 789 Р</span>
+                    <img class="ml-4    " src="img/user1.png"/>&nbsp
+                    <span class="hidden-xl"> ВОЙТИ</span>
                 </div>
-                <div class="menu__user">
-                    <img src="img/user1.png"/>&nbsp
-                    <span> ВОЙТИ</span>
-                </div>
-            </div>           
-        </div>
+                <hr>
+            </div>
+        </nav>         
+    </header>
+    <main class="">
         <div class="slider">
             <div class="slide_viewer">
                 <div class="slide_group">
@@ -97,19 +112,21 @@
                     </div>
                 </div>
             </div>
-        </div><!-- End // .slider -->
-        <div class="slide_buttons">
-        </div>
-
+        </div><!-- End // .slider -->        
         <div class="directional_nav">
             <div class="previous_btn" title="Previous">
             </div>
-            <div class="directional_nav_title"> 
+            <div class="directional_nav_title p-3"> 
                <p>Новая коллекция SWAROVSKI уже здесь!</p>
             </div>
             <div class="next_btn" title="Next">    
             </div>
+        </div> 
+        <div class="slide_buttons">
         </div>
-    </div>
+    </main>  
+    <footer class="m-5 p-5">
+        <p></p>
+    </footer> 
 </body>
 </html>
