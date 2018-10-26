@@ -6,10 +6,7 @@ var resizeId;
 $(document).ready(function($) {
     "use strict";
 
-    $(".ts-bubble-border").each(function () {
-        var $this = $(this);
-        $this.prepend("<i></i><i></i><i></i><i></i><i></i>");
-    });
+   
 
     $("#ts-content .ts-bubble-border, #ts-footer .ts-bubble-border").each(function () {
         var $this = $(this);
@@ -23,16 +20,6 @@ $(document).ready(function($) {
         });
     });
 
-    $(".ts-promo-numbers").each(function () {
-        $(this).isInViewport(function(status) {
-            if (status === "entered") {
-                for( var i=0; i < document.querySelectorAll(".odometer").length; i++ ){
-                    var el = document.querySelectorAll('.odometer')[i];
-                    el.innerHTML = el.getAttribute("data-odometer-final");
-                }
-            }
-        });
-    });
 
     $("body").imagesLoaded( function() {
         $("body").addClass("loading-done");
@@ -71,11 +58,6 @@ $(document).ready(function($) {
     });
 
 
-
-    $(".ts-title-rotate span").each(function(){
-        //alert( $(this).width() );
-    });
-
   $('.navbar-nav .nav-link').on('click', function(){
     $('.navbar-collapse').collapse('hide');
   });
@@ -84,129 +66,80 @@ $(document).ready(function($) {
         $(this).css("background-image", "url("+ $(this).find("img").attr("src") +")" );
     });
 
-//  Background
+    //  Background
 
-    $("[data-bg-color], [data-bg-image], [data-bg-particles]").each(function() {
-        var $this = $(this);
+        $("[data-bg-color], [data-bg-image], [data-bg-particles]").each(function() {
+            var $this = $(this);
 
-        if( $this.hasClass("ts-separate-bg-element") ){
-            $this.append('<div class="ts-background">');
+            if( $this.hasClass("ts-separate-bg-element") ){
+                $this.append('<div class="ts-background">');
 
-            // Background Color
+                // Background Color
 
-            if( $("[data-bg-color]") ){
-                $this.find(".ts-background").css("background-color", $this.attr("data-bg-color") );
-            }
+                if( $("[data-bg-color]") ){
+                    $this.find(".ts-background").css("background-color", $this.attr("data-bg-color") );
+                }
 
-            // Particles
+                // Particles
 
-            if( $this.attr("data-bg-particles-line-color") || $this.attr("data-bg-particles-dot-color") ){
-                $this.find(".ts-background").append('<div class="ts-background-particles">');
-                $(".ts-background-particles").each(function () {
-                    var lineColor = $this.attr("data-bg-particles-line-color");
-                    var dotColor = $this.attr("data-bg-particles-dot-color");
-                    var parallax = $this.attr("data-bg-particles-parallax");
-                    $(this).particleground({
-                        density: 15000,
-                        lineWidth: 0.2,
-                        lineColor: lineColor,
-                        dotColor: dotColor,
-                        parallax: parallax,
-                        proximity: 200
+                if( $this.attr("data-bg-particles-line-color") || $this.attr("data-bg-particles-dot-color") ){
+                    $this.find(".ts-background").append('<div class="ts-background-particles">');
+                    $(".ts-background-particles").each(function () {
+                        var lineColor = $this.attr("data-bg-particles-line-color");
+                        var dotColor = $this.attr("data-bg-particles-dot-color");
+                        var parallax = $this.attr("data-bg-particles-parallax");
+                        $(this).particleground({
+                            density: 15000,
+                            lineWidth: 0.2,
+                            lineColor: lineColor,
+                            dotColor: dotColor,
+                            parallax: parallax,
+                            proximity: 200
+                        });
                     });
-                });
-            }
+                }
 
-            // Background Image
+                // Background Image
 
-            if( $this.attr("data-bg-image") !== undefined ){
-                $this.find(".ts-background").append('<div class="ts-background-image">');
-                $this.find(".ts-background-image").css("background-image", "url("+ $this.attr("data-bg-image") +")" );
-                $this.find(".ts-background-image").css("background-size", $this.attr("data-bg-size") );
-                $this.find(".ts-background-image").css("background-position", $this.attr("data-bg-position") );
-                $this.find(".ts-background-image").css("opacity", $this.attr("data-bg-image-opacity") );
+                if( $this.attr("data-bg-image") !== undefined ){
+                    $this.find(".ts-background").append('<div class="ts-background-image">');
+                    $this.find(".ts-background-image").css("background-image", "url("+ $this.attr("data-bg-image") +")" );
+                    $this.find(".ts-background-image").css("background-size", $this.attr("data-bg-size") );
+                    $this.find(".ts-background-image").css("background-position", $this.attr("data-bg-position") );
+                    $this.find(".ts-background-image").css("opacity", $this.attr("data-bg-image-opacity") );
 
-                $this.find(".ts-background-image").css("background-size", $this.attr("data-bg-size") );
-                $this.find(".ts-background-image").css("background-repeat", $this.attr("data-bg-repeat") );
-                $this.find(".ts-background-image").css("background-position", $this.attr("data-bg-position") );
-                $this.find(".ts-background-image").css("background-blend-mode", $this.attr("data-bg-blend-mode") );
-            }
+                    $this.find(".ts-background-image").css("background-size", $this.attr("data-bg-size") );
+                    $this.find(".ts-background-image").css("background-repeat", $this.attr("data-bg-repeat") );
+                    $this.find(".ts-background-image").css("background-position", $this.attr("data-bg-position") );
+                    $this.find(".ts-background-image").css("background-blend-mode", $this.attr("data-bg-blend-mode") );
+                }
 
-            // Parallax effect
+                // Parallax effect
 
-            if( $this.attr("data-bg-parallax") !== undefined ){
-                $this.find(".ts-background-image").addClass("ts-parallax-element");
-            }
-        }
-        else {
-
-            if(  $this.attr("data-bg-color") !== undefined ){
-                $this.css("background-color", $this.attr("data-bg-color") );
-                if( $this.hasClass("btn") ) {
-                    $this.css("border-color", $this.attr("data-bg-color"));
+                if( $this.attr("data-bg-parallax") !== undefined ){
+                    $this.find(".ts-background-image").addClass("ts-parallax-element");
                 }
             }
+            else {
 
-            if( $this.attr("data-bg-image") !== undefined ){
-                $this.css("background-image", "url("+ $this.attr("data-bg-image") +")" );
-
-                $this.css("background-size", $this.attr("data-bg-size") );
-                $this.css("background-repeat", $this.attr("data-bg-repeat") );
-                $this.css("background-position", $this.attr("data-bg-position") );
-                $this.css("background-blend-mode", $this.attr("data-bg-blend-mode") );
-            }
-
-        }
-    });
-
-//  Parallax Background Image
-
-    $("[data-bg-parallax='scroll']").each(function() {
-        var speed = $(this).attr("data-bg-parallax-speed");
-        var $this = $(this);
-        var isVisible;
-        var backgroundPosition;
-
-        $this.isInViewport(function(status) {
-            if (status === "entered") {
-                isVisible = 1;
-                var position;
-
-                $(window).scroll(function () {
-                    if( isVisible === 1 ){
-                        position = $(window).scrollTop() - $this.offset().top;
-                        backgroundPosition = (100 - (Math.abs((-$(window).height()) - position) / ($(window).height()+$this.height()))*100);
-                        if( $this.find(".ts-parallax-element").hasClass("ts-background-image") ){
-                            $this.find(".ts-background-image.ts-parallax-element").css("background-position-y", (position/speed) + "px");
-                        }
-                        else {
-                            $this.find(".ts-parallax-element").css("transform", "translateY(" +(position/speed)+ "px)");
-                        }
+                if(  $this.attr("data-bg-color") !== undefined ){
+                    $this.css("background-color", $this.attr("data-bg-color") );
+                    if( $this.hasClass("btn") ) {
+                        $this.css("border-color", $this.attr("data-bg-color"));
                     }
-                });
-            }
-            if (status === "leaved"){
-                isVisible = 0;
+                }
+
+                if( $this.attr("data-bg-image") !== undefined ){
+                    $this.css("background-image", "url("+ $this.attr("data-bg-image") +")" );
+
+                    $this.css("background-size", $this.attr("data-bg-size") );
+                    $this.css("background-repeat", $this.attr("data-bg-repeat") );
+                    $this.css("background-position", $this.attr("data-bg-position") );
+                    $this.css("background-blend-mode", $this.attr("data-bg-blend-mode") );
+                }
+
             }
         });
-    });
-
-    $(".ts-labels-inside-input input, .ts-labels-inside-input textarea").focusin(function() {
-        $(this).parent().find("label").addClass("focused");
-        })
-        .focusout(function() {
-            if( $(this).val().length === 0 ){
-                $(this).parent().find("label").removeClass("focused")
-        }
-    });
-
-    $("select").each(function(){
-        $(this).wrap('<div class="select-wrapper"></div>');
-    });
-
-    // Owl Carousel
-
-    initOwl();
 
 
     $(".progress").each(function(){
@@ -318,109 +251,4 @@ function simpleMap(latitude, longitude, markerImage, mapStyle, mapElement, marke
         icon: markerImage,
         draggable: markerDrag
     });
-}
-
-function initOwl(){
-    var $owlCarousel = $(".owl-carousel");
-
-    if( $owlCarousel.length ){
-        $owlCarousel.each(function() {
-
-            var items = parseInt( $(this).attr("data-owl-items"), 10);
-            if( !items ) items = 1;
-
-            var nav = parseInt( $(this).attr("data-owl-nav"), 2);
-            if( !nav ) nav = 0;
-
-            var dots = parseInt( $(this).attr("data-owl-dots"), 2);
-            if( !dots ) dots = 0;
-
-            var center = parseInt( $(this).attr("data-owl-center"), 2);
-            if( !center ) center = 0;
-
-            var loop = parseInt( $(this).attr("data-owl-loop"), 2);
-            if( !loop ) loop = 0;
-
-            var margin = parseInt( $(this).attr("data-owl-margin"), 2);
-            if( !margin ) margin = 0;
-
-            var autoWidth = parseInt( $(this).attr("data-owl-auto-width"), 2);
-            if( !autoWidth ) autoWidth = 0;
-
-            var navContainer = $(this).attr("data-owl-nav-container");
-            if( !navContainer ) navContainer = 0;
-
-            var autoplay = parseInt( $(this).attr("data-owl-autoplay"), 2);
-            if( !autoplay ) autoplay = 0;
-
-            var autoplayTimeOut = parseInt( $(this).attr("data-owl-autoplay-timeout"), 10);
-            if( !autoplayTimeOut ) autoplayTimeOut = 5000;
-
-            var autoHeight = parseInt( $(this).attr("data-owl-auto-height"), 2);
-            if( !autoHeight ) autoHeight = 0;
-
-            var fadeOut = $(this).attr("data-owl-fadeout");
-            if( !fadeOut ) fadeOut = 0;
-            else fadeOut = "fadeOut";
-
-            if( $("body").hasClass("rtl") ) var rtl = true;
-            else rtl = false;
-
-            if( items === 1 ){
-                $(this).owlCarousel({
-                    navContainer: navContainer,
-                    animateOut: fadeOut,
-                    autoplayTimeout: autoplayTimeOut,
-                    autoplay: 1,
-                    autoHeight: autoHeight,
-                    center: center,
-                    loop: loop,
-                    margin: margin,
-                    autoWidth: autoWidth,
-                    items: 1,
-                    nav: nav,
-                    dots: dots,
-                    rtl: rtl,
-                    navText: []
-                });
-            }
-            else {
-                $(this).owlCarousel({
-                    navContainer: navContainer,
-                    animateOut: fadeOut,
-                    autoplayTimeout: autoplayTimeOut,
-                    autoplay: autoplay,
-                    autoHeight: autoHeight,
-                    center: center,
-                    loop: loop,
-                    margin: margin,
-                    autoWidth: autoWidth,
-                    items: 1,
-                    nav: nav,
-                    dots: dots,
-                    rtl: rtl,
-                    navText: [],
-                    responsive: {
-                        1199: {
-                            items: items
-                        },
-                        992: {
-                            items: 3
-                        },
-                        768: {
-                            items: 2
-                        },
-                        0: {
-                            items: 1
-                        }
-                    }
-                });
-            }
-
-            if( $(this).find(".owl-item").length === 1 ){
-                $(this).find(".owl-nav").css( { "opacity": 0,"pointer-events": "none"} );
-            }
-
-        });
-    }
 }
