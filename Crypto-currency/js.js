@@ -1,47 +1,33 @@
-﻿function DropDown(el) {
-    this.dd = el;
-    this.placeholder = this.dd.children('span');
-    this.opts = this.dd.find('ul.dropdown > li');
-    this.val = '';
-    this.index = -1;
-    this.initEvents();
-}
-DropDown.prototype = {
-    initEvents: function () {
-        var obj = this;
-        obj.dd.on('click', function (event) {
-            $(this).toggleClass('active');
-            return false;
-        });
+$(document).ready(function() {
+    $(".dropdown-menu li a").click(function(){
+        var selText = $(this).text();
+        $('#toggle').html('<p class="m-0">'+selText+'</p>'+' <i class="fa fa-angle-down offset-9" aria-hidden="true"></i> ');
+    });
 
-        obj.opts.on('click', function () {
-            var opt = $(this);
-            obj.val = opt.text();
-            obj.index = opt.index();
-            obj.placeholder.text(obj.val);
-        });
-    },
-    getValue: function () {
-        return this.val;
-    },
-    getIndex: function () {
-        return this.index;
-    }
-}
+    
 
-window.onload = function () {
-    var menuElem = document.getElementById('dropdown-menu'),
-    titleElem = menuElem.querySelector('.tit');
-    document.onclick = function (event) {
-        var target = elem = event.target;
-        while (target != this) {
-            if (target == menuElem) {
-                if (elem.tagName == 'A') titleElem.innerHTML = elem.textContent;
-                menuElem.classList.toggle('open')
-                return;
-            }
-            target = target.parentNode;
-        }
-        menuElem.classList.remove('open');
-    }
-}
+    $(".radio").click(function(){
+    	this.classList.toggle('radioChange_on');
+    	n = $('.radio').index(this);
+    	var a = $(".absChange");
+    	var p = $(".percentChange");	
+    	$(a[n]).toggleClass('hide');
+    	$(p[n]).toggleClass('hide');    	   	
+    }); 
+
+    $(function() {
+    	var l = $(".changes").length;
+    	var c = $(".changes");    	
+    	for(i=0; i<l; i++){ 
+    		var h = parseInt(c[i].innerHTML);  	
+				if(h>0){
+					$(c[i]).addClass('positive');	
+    			}
+    			else{
+    				$(c[i]).addClass('negative');	
+    			}
+    		}
+    	}); 
+
+
+});
