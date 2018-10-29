@@ -8,111 +8,143 @@
     <meta name="MobileOptimized" content="320" />
     <meta name="HandheldFriendly" content="true" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.0.4/popper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js.js"></script>
-    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="css.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
     <title>Crypto-currency</title>
 </head>
 <body> 
-    <div class="warp">
-        <div class="wrapper">
-            <div class="sel">
-                <div class="txt"><span>Select currency to exchange: </span></div>
-                <div id="dropdown-menu" class="dropdown-menu">
-                    <div class="title">
-                        <span class="tit">USD</span>
-                        <span id="arrow">
-                            <img src="img/select_icon.png"/>
-                        </span>
-                    </div>
-                    <ul>
-                        <li><a href="#">USD</a></li>
-                        <li><a href="#">EUR</a></li>
-                        <li><a href="#">RUB</a></li>
-                        <li><a href="#">GBP</a></li>
-                    </ul>
-                </div>
-
+  <div class="wrapper p-3 pt-5">
+    <header class="container">
+        <div class="row m-0 pr-3 justify-content-between">
+            <div class="col-md-8 col-12 d-flex align-items-center justify-content-center p-0">
+                <h2 class="m-0 p-2">Select currency to exchange: </h2>
+            </div>      
+            <div class="dropdown mt-3 mb-3 pt-3 pb-3  offset-md-0 col-md-4 offset-3 col-6">
+                <a id="toggle" class="d-flex align-items-center justify-content-center" data-toggle="dropdown" href="#">
+                    <p class="m-0">USD</p>
+                    <i class="fa fa-angle-down offset-9" aria-hidden="true"></i>    
+                </a>
+                <ul class="dropdown-menu mt-2 col-md-12">
+                    <li><a href="#">USD</a></li>
+                    <li><a href="#">EUR</a></li>
+                    <li><a href="#">RUB</a></li>
+                    <li><a href="#">GBP</a></li>
+                </ul>             
             </div>
-            <div class="cont">
-                <div class="e">
-                    <div class="curName">Ethereum</div>
-                    <div class="price"><span>Price:</span> <span>$22 526.92</span></div>
-                    <div class="pchange">Percent change <img class="rad" src="img/radio_off.png" /></div>
-                    <div class="otherCh">
-                        <div>
-                            <div class="changes">
-                                <p>Hour change</p>
-                                <span>+266%</span>
+        </div>
+    </header>
+    <main class="container mt-4 mb-3">
+        <div class="row">
+            <div class="col-lg-4 col-sm-6 col-12 pt-3">
+                <div class="item e d-flex flex-column justify-content-between">
+                    <h4 class="p-4 font-weight-bold text-center">Ethereum</h4>
+                    <div class="container p-4">
+                        <h5 class="font-weight-bold d-flex justify-content-between">
+                            <span>Price: </span>
+                            <span class="price">$22 526.92</span>
+                        </h5>
+                        <h6 class="font-weight-bold d-flex justify-content-between mt-3 radio">
+                            <span>Percent change: </span> 
+                        </h6>
+                        <div class="d-flex justify-content-between"> 
+                            <div>
+                                <h6>Hour change </h6>
+                                <h6>Day change  </h6>
+                                <h6>Week change </h6>
+                                <h6>Month change </h6>
+                            </div>                        
+                            <div class="percentChange hide">
+                                <h6 class="changes">+266%</h6>
+                                <h6 class="changes">-266%</h6>
+                                <h6 class="changes">+266%</h6>
+                                <h6 class="changes">+266%</h6>
                             </div>
-                            <div class="changes">
-                                <p>Day change</p>
-                                <span>+266%</span>
+                            <div class="absChange">
+                                <h6 class="changes">+26&#36</h6>
+                                <h6 class="changes">-26&#36</h6>
+                                <h6 class="changes">+26&#36</h6>
+                                <h6 class="changes">+26&#36</h6>
                             </div>
-                            <div class="changes">
-                                <p>Week change</p>
-                                <span>+266%</span>
-                            </div>
-                            <div class="changes">
-                                <p>Month change</p>
-                                <span>+266%</span>
-                            </div>
-                        </div>                       
+                        </div>                         
                     </div>
                 </div>
-                <div class="l">
-                    <div class="curName">Litecoin</div>
-                    <div class="price"><span>Price:</span> <span>$22 526.92</span></div>
-                    <div class="pchange">Percent change <img class="rad" src="img/radio_on.png" /></div>
-                    <div class="otherCh">
-                        <div>
-                            <div class="changes">
-                                <p>Hour change</p>
-                                <span>+266%</span>
+            </div>
+            <div class="col-lg-4 col-sm-6 col-12 pt-3">
+                <div class="item l d-flex flex-column justify-content-between">
+                    <h4 class="p-4 font-weight-bold text-center">Litecoin</h4>
+                    <div class="container p-4">
+                        <h5 class="font-weight-bold d-flex justify-content-between">
+                            <span>Price: </span>
+                            <span class="price">$22 526.92</span>
+                        </h5>
+                        <h6 class="font-weight-bold d-flex justify-content-between mt-3 radio">
+                            <span>Percent change: </span> 
+                        </h6>
+                        <div class="d-flex justify-content-between"> 
+                            <div>
+                                <h6>Hour change </h6>
+                                <h6>Day change  </h6>
+                                <h6>Week change </h6>
+                                <h6>Month change </h6>
+                            </div>                        
+                            <div class="percentChange hide">
+                                <h6 class="changes">+266%</h6>
+                                <h6 class="changes">-266%</h6>
+                                <h6 class="changes">+266%</h6>
+                                <h6 class="changes">+266%</h6>
                             </div>
-                            <div class="changes">
-                                <p>Day change</p>
-                                <span>+266%</span>
+                            <div class="absChange">
+                                <h6 class="changes">+26&#36</h6>
+                                <h6 class="changes">-26&#36</h6>
+                                <h6 class="changes">+26&#36</h6>
+                                <h6 class="changes">+26&#36</h6>
                             </div>
-                            <div class="changes">
-                                <p>Week change</p>
-                                <span>+266%</span>
-                            </div>
-                            <div class="changes">
-                                <p>Month change</p>
-                                <span>+266%</span>
-                            </div>
-                        </div>
-                    </div>
+                        </div>                         
+                    </div>                    
                 </div>
-                <div class="b">
-                    <div class="curName">Bitcoin</div>
-                    <div class="price"><span>Price:</span> <span>$22 526.92</span></div>
-                    <div class="pchange">Percent change <img class="rad" src="img/radio_on.png" /></div>
-                    <div class="otherCh">
-                        <div>
-                            <div class="changes">
-                                <p>Hour change</p>
-                                <span>+266%</span>
+            </div>
+            <div class="col-lg-4 col-sm-6 col-12 pt-3">
+                <div class="item b d-flex flex-column justify-content-between">
+                    <h4 class="p-4 font-weight-bold text-center">Bitcoin</h4>
+                    <div class="container p-4">
+                        <h5 class="font-weight-bold d-flex justify-content-between">
+                            <span>Price: </span>
+                            <span class="price">$22 526.92</span>
+                        </h5>
+                        <h6 class="font-weight-bold d-flex justify-content-between mt-3 radio">
+                            <span>Percent change: </span> 
+                        </h6>
+                        <div class="d-flex justify-content-between"> 
+                            <div>
+                                <h6>Hour change </h6>
+                                <h6>Day change  </h6>
+                                <h6>Week change </h6>
+                                <h6>Month change </h6>
+                            </div>                        
+                            <div class="percentChange hide">
+                                <h6 class="changes">+266%</h6>
+                                <h6 class="changes">-266%</h6>
+                                <h6 class="changes">+266%</h6>
+                                <h6 class="changes">+266%</h6>
                             </div>
-                            <div class="changes">
-                                <p>Day change</p>
-                                <span>+266%</span>
+                            <div class="absChange">
+                                <h6 class="changes">+26&#36</h6>
+                                <h6 class="changes">-26&#36</h6>
+                                <h6 class="changes">+26&#36</h6>
+                                <h6 class="changes">+26&#36</h6>
                             </div>
-                            <div class="changes">
-                                <p>Week change</p>
-                                <span>+266%</span>
-                            </div>
-                            <div class="changes">
-                                <p>Month change</p>
-                                <span>+266%</span>
-                            </div>
-                        </div>
+                        </div>                         
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
+  </div>
 </body>
 </html>
