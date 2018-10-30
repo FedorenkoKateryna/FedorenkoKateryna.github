@@ -28,16 +28,28 @@
        <div class="navbar navbar-static-top" role="navigation">    
         <div class="navbar-header navbar-inverse">
             <div class="container">               
-                <a class="navbar-brand" href="#"><img src="img/logo_title.jpg"/></a>
-                <div class="nv_but">
-                    <a class="hidden-xs gift" href="#">BRAND GIFT CARDS</a>
-                    <div class="nv_but__left">
-                        <div><a href=""><img class="lang" src="img/lang.jpg"/><span class="hidden-xs"> ENG </span></a></div>
-                        <div><a href=""><i class="fa fa-bell-o" aria-hidden="true"></i></a></div>
-                        <div><a href=""><i class="fa fa-envelope-o" aria-hidden="true"></i></a></div>
-                        <div class="basket"><a href=""><i class="fa fa-shopping-bag" aria-hidden="true"></i> <span class="hidden-xs">&nbsp 999 ithems </span></a></div>
-                        <div class="login"><a href=""><img src="img/login_foto.jpg"/><span class="hidden-xs">&nbsp Nadiezhdaaaaaaa &nbsp</span><i class="fa fa-angle-down" aria-hidden="true"></i></a></div>
-                    </div>
+                <a class="col-md-2 col-xs-3 h3 kf-logo" href="#"></a>         
+                <a class="col-md-offset-1 col-md-3 h3 hidden-xs kf-gift" href="#">BRAND GIFT CARDS</a>
+                <div class="col-md-6 col-xs-9 h6 kf-row">     
+                        <a href="" class="kf-row">
+                            <img class="lang" src="img/lang.jpg"/>
+                            <span class="hidden-xs">ENG &nbsp</span>
+                        </a>
+                        <a href="">
+                            <i class="fa fa-bell-o" aria-hidden="true"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp
+                        </a>
+                        <a href="" class="kf-basket">
+                            <i class="fa fa-shopping-bag" aria-hidden="true"></i> 
+                            <span class="hidden-xs">999 ithems </span>
+                        </a>
+                        <a href="" class="kf-row kf-login">
+                            <img src="img/login_foto.jpg"/>
+                            <span class="hidden-xs">Nadiezhdaaaaaaa </span>
+                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </a>
                 </div>
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -47,8 +59,8 @@
                 </button>
             </div>
         </div>                 
-        <div class="navbar-collapse collapse" style="height: 1px;">
-          <ul class="nav navbar-nav">
+        <div class="container navbar-collapse collapse">
+          <ul class="nav navbar-nav col-md-7">
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">CURRENCY </a>
               <ul class="dropdown-menu">
@@ -69,14 +81,15 @@
             <li><a href="#contact">TOP UP</a></li>
             <li><a href="#">ACCOUNTS</a></li>
           </ul>            
-          <div id="imaginary_container" class="hidden-xs"> 
+          <div id="imaginary_container" class="hidden-xs col-md-offset-1 col-md-4"> 
             <div class="input-group stylish-input-group">
+                
+                <input type="text" class="form-control"  placeholder="Search" >    
                 <span class="input-group-addon">
                     <button type="submit">
                         <span class="glyphicon glyphicon-search"></span>
                     </button>  
-                </span>
-                <input type="text" class="form-control"  placeholder="Search" >                   
+                </span>               
             </div>                    
           </div>
         </div>          
@@ -90,7 +103,7 @@
         <div class="carousel-inner">
             <div class="item active item1">                    
                 <div class="carousel-caption">
-                  <div>
+                  <div class="col-md-7 col-xs-6">
                     <div>
                         <h2 class="dd">World Of Warcraft(EU)</h2>
                         <p><span>1010 </span>offers from <span>$999.99</span></p>
@@ -103,7 +116,7 @@
             </div>
             <div class="item item2"> 
                 <div class="carousel-caption">
-                  <div>
+                  <div class="col-md-7 col-xs-6">
                     <div>
                         <h2>World of Warcraft(EU)</h2>
                         <p><span>1010 </span>offers from <span>$999.99</span></p>
@@ -116,7 +129,7 @@
             </div>
             <div class="item item3">  
               <div class="carousel-caption">
-                <div>
+                <div class="col-md-7 col-xs-6">
                   <div>
                     <h2>World of Warcraft(EU)</h2>
                     <p><span>1010 </span>offers from <span>$999.99</span></p>
@@ -161,11 +174,11 @@
                         </div>
                     </div>
                     <div class="counter1">
-                        <div class="counter1__slider col-md-6  col-xs-12">
+                        <div class="counter1__slider col-md-6  col-xs-6">
                             <span>Units you will buy</span>
                             <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="30" data-slider-step="1" data-slider-value="1"/>
                         </div>
-                        <div class="counter1__count col-md-6  col-xs-12"> 
+                        <div class="counter1__count col-md-6  col-xs-6"> 
                             <div class="qty mt-5 col-md-4 col-xs-5">      
                                 <input id="count" class="count col-md-offset-1 col-md-5 col-xs-offset-1 col-xs-5" name="qty" value="1">
                                 <div class="col-md-offset-1 col-md-3 col-md-offset-1 col-xs-offset-1 col-xs-3 col-xs-offset-1">
@@ -190,7 +203,7 @@
             </div>
           </div>
         </div>
-        <ol class="carousel-indicators">
+        <ol class="carousel-indicators col-md-offset-6 col-md-2">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1" class=""></li>
             <li data-target="#myCarousel" data-slide-to="2" class=""></li>
