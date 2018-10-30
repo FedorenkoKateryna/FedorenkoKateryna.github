@@ -19,7 +19,7 @@ ul{
 .wrapper {
     min-height: 100vh;
     background: url('img/f.png') no-repeat top center;    
-    background-size: cover;
+    background-size: cover;    
 }
 .container{
     padding: 0 !important;
@@ -29,6 +29,10 @@ header{
     border: solid 1px rgb(43,59,69);
     border-radius: 7px;    
     padding: 0 !important;
+    margin-top: 2rem!important;
+}
+main{
+    margin-top: 2rem!important;
 }
 .dropdown {
     border: solid 1px rgb(43,59,69);
@@ -37,13 +41,18 @@ header{
     z-index: 2;
     color: #c3c5c6; 
     width: 25% !important; 
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
     .dropdown-menu {
         padding:4% 0% 2% 4% !important;
         border: solid 1px rgb(146,232,254) !important;
         border-radius: 7px ;
         background: rgb(20, 34, 44)!important;  
-        transform: translate3d(0px, 53px, 0px) !important;  
+        transform: translate3d(0px, 53px, 0px) !important; 
+        margin-top: .5rem !important; 
     }
         .dropdown-menu li {
             background: rgb(20, 34, 44);
@@ -94,5 +103,44 @@ header{
     color: #b01325 !important;
 }
 
+@media only screen and (max-width: 767px) {
+    header{
+        margin-top: 0rem!important;
+    }
+    main{
+        margin-top: 0rem!important;
+    }
+    .wrapper {
+        padding-top: .5rem!important;
+    }
+    .dropdown{
+        margin-top: 0 !important;
+        margin-bottom: .3rem !important;
+        padding-top: .3rem;
+        padding-bottom: .3rem;
+    }    
+    .dropdown-menu {
+        margin-top: -1rem !important; 
+    }
+    .item{
+        height: 400px;
+    }
+    h2{
+        font-size: 26px !important;
+    }    
+    h5{
+        font-size: 18px !important;
+    }
+    h6{
+        font-size: 16px !important;
+    }
+
+}
+@media only screen and (max-width: 400px) {
+    h2{
+        font-size: 19px !important;
+    }
+
+}
 
 
