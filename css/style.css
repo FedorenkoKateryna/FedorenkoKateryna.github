@@ -372,7 +372,10 @@ B. Helpers
     width: 100%;
     z-index: -2;
 }
-
+.ts-logo{
+    height: 65px;
+    width: 65px;
+}
 .ts-background .ts-background {
     height: 100%;
     width: 100%;
@@ -1174,7 +1177,7 @@ blockquote h6 {
     display: inline-block;
     position: relative;
     overflow: hidden;
-    vertical-align: middle;
+    vertical-align: middle; 
 }
 
 .ts-btn-effect:hover .ts-hidden {
