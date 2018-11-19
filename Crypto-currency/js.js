@@ -47,17 +47,23 @@ function getJson() {
                 apiLTC = 'https://apiv2.bitcoinaverage.com/indices/global/ticker/LTCEUR'
                 apiETH = 'https://apiv2.bitcoinaverage.com/indices/global/ticker/ETHEUR'
             break;
-            case "RUB":
-                cur_sym = 'ք';
-                apiBTC = 'https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCRUB'
-                apiLTC = 'https://apiv2.bitcoinaverage.com/indices/global/ticker/LTCRUB'
-                apiETH = 'https://apiv2.bitcoinaverage.com/indices/global/ticker/ETHRUB'
+            case "UAH":
+                cur_sym = '₴';
+                apiBTC = 'https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUAH'
+                apiLTC = 'https://apiv2.bitcoinaverage.com/indices/global/ticker/LTCUAH'
+                apiETH = 'https://apiv2.bitcoinaverage.com/indices/global/ticker/ETHUAH'
             break;
             case "GBP":
                 cur_sym = '£';
                 apiBTC = 'https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCGBP'
                 apiLTC = 'https://apiv2.bitcoinaverage.com/indices/global/ticker/LTCGBP'
                 apiETH = 'https://apiv2.bitcoinaverage.com/indices/global/ticker/ETHGBP'
+            break;
+            case "RUB":
+                cur_sym = 'ք';
+                apiBTC = 'https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCRUB'
+                apiLTC = 'https://apiv2.bitcoinaverage.com/indices/global/ticker/LTCRUB'
+                apiETH = 'https://apiv2.bitcoinaverage.com/indices/global/ticker/ETHRUB'
             break;
             default:
                 apiBTC = 'false'
