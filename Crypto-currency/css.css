@@ -96,6 +96,9 @@ main{
 .hide{
     display: none;
 }
+.percentChange, .absChange{
+    text-align: right;
+}
 .positive{
     color: #70c446 !important;
 }
@@ -132,7 +135,7 @@ main{
         font-size: 18px !important;
     }
     h6{
-        font-size: 16px !important;
+        font-size: 16px !important;        
     }
 
 }
